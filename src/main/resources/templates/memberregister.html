@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>註冊作業</title>
+</head>
+<body>
+<fieldset>
+    <legend>註冊作業</legend>
+    <!--設計表單-->
+    <form method="post">
+        <div>
+            <div>使用者帳號</div>
+            <input type="text" th:value="${member.username}" name="username"/>
+        </div>
+        <div>
+            <div>使用者密碼</div>
+            <input type="password" th:value="${member.password}" name="password"/>
+        </div>
+        <div>
+            <div>EMAIL</div>
+            <input type="text" th:value="${member.email}" name="email"/>
+        </div>
+        <div>
+            <div>連絡電話</div>
+            <input type="text" th:value="${member.phone}" name="phone"/>
+        </div>
+        <br/>
+        <input type="submit" value="註冊"/>
+
+    </form>
+    <div><h3 th:text="${message}"></h3></div>
+
+
+</fieldset>
+</body>
+</html>
